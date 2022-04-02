@@ -1,0 +1,32 @@
+﻿<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+        <div class="card">
+            <div class="card-header"> Faça seu Login </div>
+            <div class="card-body">
+
+
+                <img src="~/download.png" class="img-thumbnail" />
+
+                <form action="/Login/Entrar" method="post" onclick="return validar()">
+                    <input placeholder="Digite um Usuario" type="text" class="form-control" name="usuario" id="usuario" />
+                    <br />
+                    <input placeholder="Digite a Senha" type="password" class="form-control" name="senha" />
+                    <br />
+                    <button type="submit" class="btn btn-success"> Logar </button>
+                </form>
+            </div>
+            <div class="card-footer"> Esqueceu a Senha? </div>
+        </div>
+    </div>
+    <div class="col-4"></div>
+</div>
+<script>
+    function validar() {
+        if ($("#usuario").val() == "") {
+            alert("Campo Usuario não pode ficar vazio");
+            $("#usuario").css("border", "2px solid #FF0000");
+            return false;
+        }
+    }
+</script>
