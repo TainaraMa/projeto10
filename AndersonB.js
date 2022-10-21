@@ -1,0 +1,3 @@
+fuction alerta(){
+  alert("Olá")
+}
